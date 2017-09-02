@@ -1,0 +1,4 @@
+---
+# tasks file for ansible-windows-updates
+- include: windows.yml
+  when: ansible_os_family == "Windows"
