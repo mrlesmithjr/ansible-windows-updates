@@ -1,4 +1,7 @@
 ---
 # tasks file for ansible-windows-updates
-- include: windows.yml
-  when: ansible_os_family == "Windows"
+
+- include: updates.yml
+
+- include: reboot.yml
+  when: windows_updates_reboot
